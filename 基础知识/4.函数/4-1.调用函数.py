@@ -3,3 +3,4 @@
 print(abs(100))
 print(abs(-80))
 print(abs(16.23))
+print(abs(-26.12))

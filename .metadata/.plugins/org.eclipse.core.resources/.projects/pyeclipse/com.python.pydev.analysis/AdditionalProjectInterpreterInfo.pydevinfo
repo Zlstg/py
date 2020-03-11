@@ -1,0 +1,38 @@
+-- VERSION_5
+-- START DISKCACHE_2
+D:\py\.metadata\.plugins\org.eclipse.core.resources\.projects\pyeclipse\com.python.pydev.analysis\v2_indexcache
+play.佩奇|1575972109193318000|D:\py\pyeclipse\play\佩奇.py
+src.同时输出多个变量|1576056148110984000|D:\py\pyeclipse\src\同时输出多个变量.py
+src.python关键字和内置函数|1576130107233392000|D:\py\pyeclipse\src\python关键字和内置函数.py
+src.helloword|1576052604728585000|D:\py\pyeclipse\src\helloword.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+5=D:\py\pyeclipse\src\同时输出多个变量.py
+1=D:\py\pyeclipse\src\helloword.py
+4=play.佩奇
+6=src.同时输出多个变量
+2=src.helloword
+3=D:\py\pyeclipse\play\佩奇.py
+-- END DICTIONARY
+-- START TREE 1
+15
+a|1|a!1^7#1*19@
+bod|1|body!3^172#5*34@
+che|1|cheek!3^152#5*34@
+ear|1|ears!3^80#5*34@
+eye|1|eyes!3^106#5*34@
+f|1|f!5^11#1*51@
+foo|1|foot!3^226#5*34@
+han|1|hands!3^193#5*34@
+hea|1|head!3^48#5*34@
+mai|1|main!3^273#5*34@
+mou|1|mouth!3^163#5*34@
+nos|1|nose!3^5#5*34@
+set|1|setting!3^265#5*34@
+tai|1|tail!3^254#5*34@
+use|2|user_age!5^3#1*51@user_name!5^2#1*51@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

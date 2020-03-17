@@ -110,3 +110,38 @@ print(calc(1,3,5,7))
 #如果已经有一个list或者tuple，要调用一个可变参数怎么办？可以这样做：
 nums = [1,2,3]
 print(calc(nums[0],nums[1],nums[2]))
+#这种写法当然是可行的，问题是太繁琐，所以Python允许你在list或tuple前面加一个*号，
+# 把list或tuple的元素变成可变参数传进去：
+print(calc(*nums))
+#*nums表示把nums这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。
+
+#   关键字参数
+#可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装为一个tuple。
+# 而关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。请看示例：
+def person(name,age,**kw):
+    print('name:',name,'age:',age,'other:',kw)
+#函数person除了必选参数name和age外，还接受关键字参数kw。在调用该函数时，可以只传入必选参数：
+person('xiaohei',2)
+#也可以传入任意个数的关键字参数：
+person('xiaohua',2,city='suqian')
+person('xiaohei',2,gender='M',job='eat')
+#关键字参数有什么用？它可以扩展函数的功能。比如，在person函数里，我们保证能接收到name和age这两个参数，
+# 但是，如果调用者愿意提供更多的参数，我们也能收到。试想你正在做一个用户注册的功能，
+# 除了用户名和年龄是必填项外，其他都是可选项，利用关键字参数来定义这个函数就能满足注册的需求。
+#和可变参数类似，也可以先组装出一个dict，然后，把该dict转换为关键字参数传进去：
+extra={'city':'suqian','job':'eat'}
+person('xiaohei',2,city=extra['city'],job=extra['job'])
+#复杂的调用可以用简化的写法：
+extra={'city':'suqian','job':'eat'}
+person('xiaohei',2,**extra)
+#**extra表示把extra这个dict的所有key-value用关键字参数传入到函数的**kw参数，kw将获得一个dict，
+# 注意kw获得的dict是extra的一份拷贝，对kw的改动不会影响到函数外的extra。
+
+#   命名关键字参数
+#对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。至于到底传入了哪些，就需要在函数内部通过kw检查。
+#仍以person()函数为例，我们希望检查是否有city和job参数：
+def person(name,age,**kw):
+    if 'city' in kw:    #有city参数
+        pass
+    if 'job'in kw:    #有job参数
+        pass

@@ -2,7 +2,8 @@
 # list是Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
 classmates = ['Miss', 'xiaoming', 'xiaohong']
 print(classmates)
-# 变量classmates就是一个list。用len()函数可以获得list元素的个数
+# 变量classmates就是一个list。
+print('--- 用len()函数可以获得list元素的个数 ---')
 print(len(classmates))
 # 用索引来访问list中每一个位置的元素，记得索引是从0开始的：
 print(classmates[0])
@@ -10,7 +11,7 @@ print(classmates[1])
 print(classmates[2])
 # 当索引超出了范围时，Python会报一个IndexError错误，所以，要确保索引不要越界，
 '''print(classmates[3])'''
-# 记得最后一个元素的索引是len(classmates) - 1。p
+print('--- 最后一个元素的索引是len(classmates) - 1 ---')
 print(len(classmates) - 1)
 # 如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素：
 print(classmates[-1])
@@ -20,6 +21,7 @@ print(classmates[-3])
 '''print(classmates[-4])'''
 # list是一个可变的有序表，所以，可以往list中追加元素到末尾：
 classmates.append('xiaohei')
+classmates.append('niaoniao')
 print(classmates)
 # 也可以把元素插入到指定的位置，比如索引号为1的位置：索引号从0开始
 classmates.insert(1, 'ergou')

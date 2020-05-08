@@ -1,17 +1,21 @@
 #coding:utf-8
+print('包含中文的str')
 #两个字节可以表示最大的整数是65535,4个字节可以表示最大的整数是5294967295
-ord('A')
+print('order()函数获取字符的整数表示，chr()函数把编码转换为对应的字符')
+print('字符\'A\'的编码是:',ord('A'))
 #   65
-ord('中')
+print('字符\'中\'的编码是:',ord('中'))
 #   20013
-chr(66)
+print('将编码 66 转换为字符：',chr(66))
 #   B
-chr(25991)
+print('将编码 225991 转换为字符：',chr(25991))
 #   文
+print(r'将整数编码\u4e2d\u6587转换成字符：','\u4e2d\u6587')
 
-#Python对bytes类型的数据用带b前缀的单引号或双引号表示
+print('对bytes类型的数据用带b前缀的单引号或双引号表示')
 x = b'ABC'
 print(x)
+print('--- 前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节 ---')
 '''
 >>> 'ABC'.encode('ascii')
 b'ABC'
@@ -48,34 +52,31 @@ IndentationError: unexpected indent
 '中'
 '''
 
-#要计算str包含多少个字符，可以用len()函数：
-'''
->>> len('ABC')
-3
->>> len('中文')
-2
-'''
+print('--- 要计算str包含多少个字符，可以用len()函数 ---')
 
-#len()函数计算的是str的字符数，如果换成bytes，len()函数就计算字节数：
-'''
->>> len(b'ABC')
-3
->>> len(b'\xe4\xb8\xad\xe6\x96\x87')
-6
->>> len('中文'.encode('utf-8'))
-6
->>> len('ABC'.encode('ascii'))
-3
-'''
+print(len('ABC'))
+# 3
+print(len('中文'))
+# 2
+
+print('--- len()函数计算的是str的字符数，如果换成bytes，len()函数就计算字节数 ---')
+print(len(b'ABC'))
+# 3
+print(len(b'\xe4\xb8\xad\xe6\x96\x87'))
+# 6
+print(len('中文'.encode('utf-8')))
+# 6
+print(len('ABC'.encode('ascii')))
+# 3
 
 #格式化
 #在Python中，采用的格式化方式和C语言是一致的，用%实现
-'''
->>> 'Hello,%s'%'word'
-'Hello,word'
->>> 'Hi, %s, you have $%d.' % ('Miss', 10000000)
-'Hi, Miss, you have $10000000.'
-'''
+
+print('Hello,%s' %'word,,,,')
+# 'Hello,word'
+print('Hi, %s, you have $%d.' % ('Miss', 10000000))
+# 'Hi, Miss, you have $10000000.'
+
 '''
 常见占位符有
 %d	整数

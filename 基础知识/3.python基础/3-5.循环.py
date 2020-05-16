@@ -2,11 +2,15 @@
 #   循环
 #Python的循环有两种，
 # 一种是for...in循环，依次把list或tuple中的每个元素迭代出来
+print('-------for...in循环-------')
 names = ['xiaohei','xiaohua','zhula']
+print('names = ',names,'\n会依次打印出names的每个元素')
 for name in names:
     print(name)    #会依次打印出names的每个元素
+
 #所以for x in ...循环就是把每个元素代入变量x，然后执行缩进块的语句。
 #计算1-10的整数之和，可以用一个sum变量做累加
+print('使用for x in ,,, 计算出1-10整数之和')
 sum = 0
 for x in [1,2,3,4,5,6,7,8,9,10]:
     sum = sum + x
@@ -14,13 +18,16 @@ print(sum)
 #Python提供一个range()函数，可以生成一个整数序列
 #再通过list()函数可以转换为list
 print(list(range(11)))    #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-#这样就可以计算1-100的整数之和
+print('计算1-100的整数之和')
 sum = 0
 for x in range(101):
     sum = sum + x
 print(sum)    #5050
 #第二种循环是while循环，只要条件满足，就不断循环，条件不满足时退出循环。
+print('------while循环---------')
 # 计算100以内所有奇数之和，可以用while循环实现：
+
+print('100以内整数的奇数之和')
 sum = 0
 n = 99
 while n > 0:
@@ -28,6 +35,27 @@ while n > 0:
     n = n - 2
 print(sum)
 
+sum = 0
+n = 1
+while n < 100:
+    sum = sum + n
+    n = n + 2
+print(sum)
+
+print('100以内整数的偶数之和')
+sum = 0
+n = 100
+while n > 0:
+    sum = sum + n
+    n = n -2
+print(sum)
+
+sum = 0
+n = 0
+while n <101:
+    sum = sum + n
+    n = n +2
+print(sum)
 #练习，利用循环依次对list中的每个名字打印出Hello, xxx!：
 l = ['xiaohei','xiaohong','xiaohua']
 for x in l:

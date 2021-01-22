@@ -1,2 +1,2 @@
-while True:
-    print('哈哈哈')
+x = 'http://%s/'
+print(x[:7])

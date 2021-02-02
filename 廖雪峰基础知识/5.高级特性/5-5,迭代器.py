@@ -15,3 +15,26 @@ print('generator: ',isinstance((x for x in range(10)), Iterator))
 print('list: ', isinstance([], Iterator))
 print('dict: ', isinstance({}, Iterator))
 print('str: ', isinstance('abc', Iterator))
+
+# 要把 list duct str等Iterable变成Iterator可以使用iter()函数
+print('---------------iter(),Iterator')
+print('list: ',isinstance(iter([]),Iterator))
+print('dict: ',isinstance(iter(()),Iterator))
+print('str: ',isinstance(iter('anc'),Iterator))
+
+
+
+
+# 小结
+print('----------------小结')
+for x in [1, 2, 3, 4, 5]:
+    print(x)
+print('完全等价于:')
+it = iter([1, 2, 3, 4, 5])
+
+while True:
+    try:
+        x = next(it)
+        print(x)
+    except StopIteration:
+        break
